@@ -1,0 +1,272 @@
+\documentclass[titlepage, 11pt]{article}
+\usepackage[a4paper,nomarginpar,total={170mm,257mm},left=25mm, right=25mm, top=20mm, bottom=20mm,]{geometry}
+%\usepackage{showframe}
+\usepackage[utf8]{inputenc}
+\usepackage[L7x]{fontenc}
+\usepackage[lithuanian]{babel}
+
+\author{Justas Mundeikis\\ Vilniaus universitetas \footnote{Šiame diskusiniame straipsnyje pateikiama tik asmeninė autoriaus nuomonė, kuri nebūtinai atspindi VU nuomonės ar pozicijos. Autoriaus el. paštas: \href{mailto: justas.mundeikis@lithuanian-economy.net}{justas.mundeikis@lithuanian-economy.net} }}
+
+
+\title{Valstybės tarnautojų pareiginės algos bazinio dydžio (VTPABD) \\ indeksavimo metodika}
+
+
+\usepackage{textcomp}% Supports many additional symbols
+\usepackage{amsmath}% Math equations, etc.
+\usepackage{amsfonts}% Math fonts (e.g. script math fonts)
+\usepackage{amssymb}% Math symbols such as infinity
+\usepackage{amsthm}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage[style=numeric,backend=biber]{biblatex}
+\addbibresource{references.bib}
+
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{float}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  filecolor=blue,   
+  urlcolor=blue,
+  citecolor=blue
+}
+\usepackage{draftwatermark}
+\SetWatermarkText{Pirminė versija}
+\SetWatermarkScale{0.5}
+
+\begin{document}
+\maketitle
+
+
+\begin{abstract}
+Seimas priėmė naują Valstybės tarnybos įstatymo pakeitimo įstatymą, kuriame yra panaikinamos kvalifikacinės klasės, bei numatomas kasmetinis VTPABD dydžio didėjimas 1 procentu už kiekvienus išdirbtus metus viešajame sektoriuje. Tačiau bazinio dydžio kasmetinis didinimas ir toliau išlieka priklausomas nuo politinės valios.
+Taip pat iki šiol nėra atsakyta, kaip ir kada bus siekiama atstatyti 2008-2009 m. sumažintą ir nuo to laikotarpio beveik nebedidintą bazinį dydį. 
+Šiame diskusiniame straipsnyje pateikiamas siūlymas kaip nuo sekančių metų (2020 m.) galėtų būti pradėtas indeksuoti valstybės tarnautojų atlyginimas, kartu numatant ir mechanizmą, kuriuo ilguoju periodu, būtų atstatytas patirtas atlyginimo praradimas nuo 2008-2009 metų krizės. Šiame diskusiniame darbe nėra analizuojamas klausimas, ar dabartiniai nustatyti koeficientai atitinka teisingumo ir adekvatumo principus. Tačiau atkreiptinas dėmesys, jog paraleliai diskutuojant apie VTPABD indeksavimą, turėtų būti peržiūrėti visų viešojo sektoriaus darbuotojų pareiginės algos koeficientai, siekiant, sumažinti galimai atsiradusias disproporcijas.
+Visi naudotų duomenų šaltiniai yra viešai prieinami, o naudoti duomenys ir skaičiavimai pateikiami tinklaraštyje \href{www.lithuanian-economy.net}{www.lithuanian-economy.net}.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Įvadas}
+Remiantis Lietuvos Respublikos valstybės tarnybos įstatymo Nr. VIII-1316 pakeitimo įstatymu, nuo 2019-01-01 valstybės tarnautojo darbo užmokestį sudarys 
+\begin{itemize}
+\setlength\itemsep{-0.5em}
+\item pareiginė alga
+\item priemokos
+\item priedas už tarnybos Lietuvos valstybei stažą
+\item apmokėjimas už darbą poilsio ir švenčių dienomis, nakties bei viršvalandinį darbą ir budėjimą
+\end{itemize}
+
+Didžiąją valstybės tarnautojo darbo užmokesčio dalį sudaro pareiginė alga, kuri nustatoma pagal valstybės tarnautojo pareigybei nustatytą pareiginės algos koeficientą arba iš pareigybei nustatyto pareiginės algos koeficientų intervalo. Pareiginės algos koeficiento vienetas yra Lietuvos Respublikos Seimo patvirtintas atitinkamų metų Lietuvos Respublikos valstybės politikų, teisėjų, valstybės pareigūnų, valstybės tarnautojų bei valstybės ir savivaldybių biudžetinių įstaigų darbuotojų pareiginės algos (atlyginimo) bazinis dydis (toliau – bazinis dydis). 
+
+Problematiška dabartiniame įstatyme yra tai, jog numatoma, kad "ateinančių finansinių metų bazinis dydis, atsižvelgiant į praėjusių metų vidutinę metinę infliaciją (skaičiuojant nacionalinį vartotojų kainų indeksą), minimaliosios mėnesinės algos dydį ir kitų vidutinio darbo užmokesčio viešajame sektoriuje dydžiui ir kitimui poveikį turinčių veiksnių įtaką, nustatomas nacionalinėje kolektyvinėje sutartyje". Tačiau įstatyme nėra pateikiami jokie reikalavimai, kaip turėtų būti nustatytas minimalus sekančių metų bazinis dydis. Atsižvelgiant į turimą praktiką, ne retai socialinių partnerių kompetencijos, o ne retai ir derybinės galios stoka sąlygoja, jog sekančių metų bazinis dydis nėra keičiamas, arba jo didinimas neatspindi darbo rinkos realijų.
+
+
+\section{Indeksavimo metodika}
+Valstybės tarnautojų pareiginės algos bazinio dydžio (VTPABD) indeksavimo tikslas, nustatyti vieningą, metodiškai pagrįstą būdą kasmet apskaičiuoti VTPABD atsižvelgiant į darbo rinkos faktinę bei prognozuojamą raidą.
+Taip pat siūloma socialiniams partneriams pritarti ir patvirtinti  indeksavimo formulės antrąją - VTPABD atstatymo dalį, kuria siekiama, jog VTPABD būtų atstatytas į prieš krizinį lygį. Atstatymas į "prieš krizinį" lygį suprantamas kaip sumažinimas skirtumo, kuris atsirado nuo 2008/2009 metų sumažinus ir iki 2018 metų nebedidinus VTPABD. 
+Taigi visa indeksavimo formulė nusakanti koks turėtų būti sekančių metų VTPABD dydžio augimas susideda iš dviejų komponenčių: Bazininio augimo faktoriaus (BAF) ir Vijimosi augimo faktoriaus (VAF) ir gali būti užrašyta kaip:
+
+\begin{equation}
+AF=BAF+VAF
+\end{equation}
+
+\subsection{Darbo užmokesčio pokyčio skaidymas}
+Atsižvelgiant į tai, jog valstybės tarnautojams priedas už tarnybos stažą sudaro vieną procentą pareiginės algos už kiekvienus tarnybos Lietuvos valstybei metus, šalies darbo užmokesčio pokytį siūloma irgi skaidyti į dvi dalis:
+\begin{enumerate}
+\item Darbo užmokesčio pokytį dėl didėjančio stažo darbe
+\item Darbo užmokesčio pokytį dėl kitų priežasčių (technologinis progresas, kainų lygio pokyčio tendencijos, ekonominio ciklo poveikis ir t.t.)
+\end{enumerate}
+Šiame diskusiniame straipsnyje nėra kvestionuojama įstatyme taikyta prielaida, jog vienerių metų darbo stažas turėtų didinti darbo užmokestį 1 procentu, kaip numatyta Valstybės tarnybos įstatymo 30 straipsnio 2. punkte ir ši prielaida taikoma ir darbo užmokesčio pokyčiui visos ekonomikos mastu.
+
+\subsection{Atskaitos metai}
+Atskaitos metai nuo kurių imama lyginti VDU (šalies ūkio be individualių įmonių) su  VTPABD raida yra labai svarbūs. Atsižvelgiant į tai, jog VTPABD savo dabartine forma atsirado nuo 2006 m., siūloma naudoti šiuos metus, kaip atskaitinius metus, tai reiškia, jog VDU ir VTPABD indeksai apskaičiuojami taip, jog 2006 m. įgytų reikšmę lygią 1. 
+Formulės dalis, kuri skirta VTPABD atstatymui į "prieš krizinį lygį" siekiama, jog VTPABD indeksas pasivytų realų VDU indeksą, t.y. VDU indeksą eliminavus darbo stažo poveikį.
+
+\subsection{Bazinis augimo fakorius - BAF}
+Pirmoji (BAF) dalis atspindi tai, kaip kinta realus darbo užmokestis šalies ekonomikoje. Formulėje naudojami trumpiniai:
+
+\begin{itemize}
+\item $VDUI_{t}$ - $t$ laikotarpio VDU indekso reikšmė. Indeksas skaičiuojamas nuo 2006 m., kai 2006 m. reikšmė sulyginama 1: $VDUI_{t}=\frac{VDU_{t}}{VDU_{2006}}$
+\item $dVDUI_t$ - $t$ laikotarpio metinis VDU indekso augimo faktorius $dVDUI_{t}=\frac{VDU_{t}}{VDU_{t-1}}$
+\item $dLP_t$ - $t$ laikotarpio nustatytas metinis darbo jėgos produktyvumo dėl stažo didėjimo augimo faktorius. Remiantis Valstybės tarnybos įstatymo 30 straipsnio 2. punktu daroma prielaida, jog $dLP_t$ produktyvumo augimo faktorius yra pastovus ir lygus vienam procentui, t.y. augimo faktorius yra lygus $dLP_t=\frac{LP_t}{LP_{t-1}}=1.01$
+\item $rdVDUI_t$ - $t$ laikotarpio realus metinis VDU indekso augimo faktorius, t.y.  įvertinus $dLP_t$: $rdVDUI_t=\frac{\frac{VDU_{t}}{VDU_{t-1}}}{dLP_t}$
+\end{itemize}
+
+Taigi $rdVDUI_t$ parodo, kaip kinta VDU, eliminuojant darbo stažo poveikį. Indeksavimui keliamas tikslas, jog sekančių metų VTPABD atspindėtų  faktinį ir prognozuojamą $rdVDUI$. Siekiant, jog neatsirastų per didelių nukrypimų, kurie galimi, naudojant ilgesnį prognozavimo laikotarpį, siūloma nustatant kitų metų VTPABD formulėje naudoti 3 periodų $rdVDUI_t$: jau žinomą praėjusių metų dydį, prognozuojamą einamųjų metų dydį bei prognozuojamą sekančių metų dydį. Pavyzdžiui, 2019 metų pavasarį bus žinomas faktinis $rdVDUI_{2018}$, taip pat Finansų ministerija jau bus pateikusi patikslintas $rdVDUI_{2019}$ bei $rdVDUI_{2020}$ prognozes. 
+
+Naudoti didesnį praeities periodų skaičių būtų netikslinga, nes tokia praktika blogintų VTPABD prisitaikymą prie aktualios darbo rinkos situacijos, todėl galimai per stipriai vėlintų reakciją į aktualius darbo rinkos pokyčius (pvz., vertinant darbo užmokesčio augimo greitėjimą arba lėtėjimą).
+
+Naudoti didesnį ateities laikotarpių  skaičių taip pat būtų netikslinga, nes  didėtų rizika, jog prognozuojant ateities VDU raida didės paklaidos, tad priimami sprendimai galimai trukdytų laiku prisitaikyti prie ateityje prognozuojamų darbo rinkos pokyčių.
+
+Galima daryti išvadą, jog taikant tokią formulę, 2/3 svertinio vidurkio yra faktiniai arba labai tiksliai prognozuojami VDU įverčiai, leidžiantys pakankamai tiksliai atkartoti VDU pokyčio raidą. 
+Ši komponentė, vadinama baziniu augimo faktoriumi ir gali būti užrašyta kaip: 
+
+\begin{equation}
+BAF_{t+1}=\frac{rdVDUI_{t-1}+rdVDUI_{t}+rdVDUI_{t+1}}{3}
+\end{equation}
+
+Žemiau pateikiama lentelė, kurioje naudojami Lietuvos statistikos departamento pateikiami metiniai VDU įverčiai bei Finansų ministerijos pateikiamos VDU prognozės. Prognozuojami rodikliai pažymimi * metų stulpelyje. Pastaba: apskaičiuojant $BAF_{2020}$, 2018 metų VDU dydis jau bus faktinis, o ne prognozuojamas.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+Metai & VDU (EUR) & VDUI  & dVDUI & dLP   & rdVDUI & BAF   \\ \hline
+2006  & 433       & 1.000 &       &       &        &       \\ \hline
+2007  & 522       & 1.205 & 1.205 & 1.010 & 1.193  &       \\ \hline
+2008  & 623       & 1.439 & 1.194 & 1.010 & 1.182  &       \\ \hline
+2009  & 596       & 1.375 & 0.956 & 1.010 & 0.946  &       \\ \hline
+2010  & 576       & 1.329 & 0.967 & 1.010 & 0.957  &       \\ \hline
+2011  & 593       & 1.368 & 1.029 & 1.010 & 1.019  &       \\ \hline
+2012  & 615       & 1.420 & 1.038 & 1.010 & 1.028  &       \\ \hline
+2013  & 646       & 1.492 & 1.051 & 1.010 & 1.040  &       \\ \hline
+2014  & 677       & 1.564 & 1.048 & 1.010 & 1.038  &       \\ \hline
+2015  & 714       & 1.648 & 1.054 & 1.010 & 1.044  &       \\ \hline
+2016  & 774       & 1.787 & 1.084 & 1.010 & 1.073  &       \\ \hline
+2017  & 840       & 1.940 & 1.086 & 1.010 & 1.075  &       \\ \hline
+2018*  & 915       & 2.113 & 1.089 & 1.010 & 1.078  &       \\ \hline
+2019*  & 984       & 2.271 & 1.075 & 1.010 & 1.064  &       \\ \hline
+2020*  & 1047      & 2.417 & 1.064 & 1.010 & 1.054  & 1.065 \\ \hline
+2021*  & 1110      & 2.562 & 1.060 & 1.010 & 1.050  & 1.056 \\ \hline
+\end{tabular}
+\caption{$BAF_t$ apskaičiavimas}
+\end{center}
+\end{table}
+
+
+Remiantis dabar turima Finansų ministerijos VDU prognoze, $BAF_{2020}=1.065$, taigi vien atkartojant VDU pokyčio raidą, nustatant 2020 metų VTPABD turėtų didėti 6.5 proc. lyginant su 2019 m. VTPABD lygiu. Tai reiškia, jog $VTPABD_{2020}=VTPABD_{2019} \times BAF_{t+1}=134.2 \times 1.065=142.98 \approx 143$€
+
+\newpage
+
+\subsection{Vijimosi augimo faktorius - VAF}
+Antroje indeksavimo formulės dalyje siekiama nustatyti atotrūkį, kuris atsirado skirtingai besivystant VDU ir VTPABD dydžiams nuo 2006 metų.
+Naudojami trumpiniai:
+
+\begin{itemize}
+\item $rVDUI_{t}$ - $t$ periodo realus VDU indekso įvertis, t.y. įvertinus metinį darbo jėgos produktyvumo dėl stažo didėjimo augimo faktorius poveikį, o  formulė užrašoma kaip $rVDUI_{t}=\frac{VDUI_{t}}{dLP^p}$, kur $p$ yra periodo skaičius atitinkamai turintis tokias reikšmes: $p_{2006}=0,p_{2007}=1,p_{2008}=2$ ir t.t. Diskutuojant augantį darbo stažo poveikį iš $VDUI$ eliminuojamas darbo stažo efektas, kuris būtų susikaupęs nuo 2006 metų.
+\item $rBDI_{t}$ - realus VTPABD indeksas, kur 2006=1 ir yra apskaičiuojamas kaip $rBDI_{t}=\frac{VTPABD_{t}}{VTPABD_{2006}}$. Šis indeksas jau yra realus, nes darbo stažo priedas skaičiuojamas papildomai prie VTPABD.
+\item $ATR_{t}$ - $t$ periode nustatytas atotrūkis  tarp $rVDUI_{t}$ ir $rBDI_{t}$ ir yra apskaičiuojamas kaip $ATR_{t}=rVDUI_{t}-rBDI_{t}$. 
+\item $\alpha$ korekcijos parametro greitis, kuriuo kasmet mažinimas atotrūkis. Šis parametras turi būti sutartas ir nustatytas visam likusiam laikotarpiui ir neturėtų būti keičiamas.
+\end{itemize}
+
+Taigi Vijimosi augimo faktorius (VAF) gali būti užrašomas kaip:
+
+\begin{equation}
+VAF_{t}= 1+ \alpha \times	(rVDUI_{t}-rBDI_{t})
+\end{equation}
+
+\subsection{Augimo faktorius - AF}
+Augimo faktorius (AF) yra bendras faktorius, kuriuo turėtų būti didinimas sekančių metų VTPABD, jeigu siekiama atspindėti VDU raidą bei siekiama pasivyti pasivyti "prieš krizinį lygį". AF formulė sekantiems metams ($t+1$) gali būti užrašoma kaip BAF ir VAF produktas.
+
+\begin{equation}
+AF_{t+1}=1+(\frac{rdVDUI_{t-1}+rdVDUI_{t}+rdVDUI_{t+1}}{3}-1) + \alpha \times	(rVDUI_{t}-rBDI_{t})
+\end{equation}
+
+
+Žemiau pateikiama lentelė, kurioje naudojami Lietuvos statistikos departamento pateikiami metiniai VDU įverčiai bei Finansų ministerijos pateikiamos VDU prognozės. Taip pat daroma prielaida, jog VDU metinis augimas po 2021 metų sieks 5 proc. Prognozuojami rodikliai pažymimi *. Pastaba: $\alpha=0.1$
+
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Metai & p  & rVDUI & rBDI  & ATR   & VAF   \\ \hline
+2006 & 0 & 1.000 & 1.000 & 0.000 &  \\ \hline
+2007 & 1 & 1.193 & 1.028 & 0.165 &  \\ \hline
+2008 & 2 & 1.410 & 1.140 & 0.270 &  \\ \hline
+2009 & 3 & 1.334 & 1.048 & 0.286 &  \\ \hline
+2010 & 4 & 1.277 & 1.048 & 0.229 &  \\ \hline
+2011 & 5 & 1.301 & 1.048 & 0.253 &  \\ \hline
+2012 & 6 & 1.338 & 1.048 & 0.289 &  \\ \hline
+2013 & 7 & 1.392 & 1.048 & 0.343 &  \\ \hline
+2014 & 8 & 1.444 & 1.048 & 0.396 &  \\ \hline
+2015 & 9 & 1.507 & 1.048 & 0.459 &  \\ \hline
+2016 & 10 & 1.617 & 1.048 & 0.569 &  \\ \hline
+2017 & 11 & 1.739 & 1.048 & 0.691 &  \\ \hline
+2018 & 12 & 1.875 & 1.064 & 0.811 &  \\ \hline
+2019* & 13 & 1.995 & 1.078 & 0.918 & 1.092 \\ \hline
+2020* & 14 & 2.103 & 1.247 & 0.855 & 1.086 \\ \hline
+2021* & 15 & 2.207 & 1.424 & 0.783 & 1.078 \\ \hline
+2022* & 16 & 2.294 & 1.603 & 0.691 & 1.069 \\ \hline
+2023* & 17 & 2.385 & 1.783 & 0.602 & 1.060 \\ \hline
+2024* & 18 & 2.480 & 1.961 & 0.519 & 1.052 \\ \hline
+2025* & 19 & 2.578 & 2.140 & 0.438 & 1.044 \\ \hline
+2026* & 20 & 2.680 & 2.318 & 0.361 & 1.036 \\ \hline
+2027* & 21 & 2.786 & 2.494 & 0.292 & 1.029 \\ \hline
+2028* & 22 & 2.896 & 2.666 & 0.231 & 1.023 \\ \hline
+2029* & 23 & 3.011 & 2.833 & 0.178 & 1.018 \\ \hline
+2030* & 24 & 3.130 & 2.995 & 0.135 & 1.013 \\ \hline
+2031* & 25 & 3.254 & 3.154 & 0.100 & 1.010 \\ \hline
+2032* & 26 & 3.383 & 3.311 & 0.072 & 1.007 \\ \hline
+2033* & 27 & 3.517 & 3.466 & 0.051 & 1.005 \\ \hline
+\end{tabular}
+\caption{$VAF_t$ apskaičiavimas}
+\end{center}
+\end{table}
+
+\newpage
+\section{VTPABD indeksavimo finansavimo poreikis}
+
+\subsection{Bazinis scenarijus}
+
+Taikant indeksavimo formulę su prielaida, jog $\alpha=0.1$, bei VDU metinis augimas nuo 2023 metų sieks kasmet 5 procentus, galima apskaičiuoti kaip galėtų atrodyti VTPABD raida iki 2033 metų, kartu apskaičiuojant reikiamas AF, BF bei VAF finansavimo sumas. \footnote{Šioje vietoje skaičiai tik orientacinio pobūdžio, todėl juos būtina vertinti labai atsargiai. Pageidautina, jog Finansų ministerijos ekonomistai įvertinę siūlomą indeksavimo modelį pateiktų savo kaštų analizę}. Labai svarbu pažymėti, jog prognozuojami indeksavimo kaštai biudžetui yra labai stipriai priklausomi nuo metinio VDU pokyčio. Todėl žemiau pateikiamoje kitoje lentelėje atsisakoma prielaidos, jog metinis VDU pokytis išlieka apstovus ir siekia 5 proc. ir taikoma prielaida, jog metinis VDU augimas įgauna gesimo formą, t.y. kasmet Vpats VDU augimas lėtėja 5 procentais.
+
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+Metai & BAF & VAF & AF & \begin{tabular}[c]{@{}c@{}}VTPABD \\ \\ (euro)\end{tabular} & \begin{tabular}[c]{@{}c@{}}AF \\ \\ (mln euro)\end{tabular} & \begin{tabular}[c]{@{}c@{}}BF \\ \\ (mln euro)\end{tabular} & \begin{tabular}[c]{@{}c@{}}VAF \\ \\ (mln euro)\end{tabular} \\ \hline
+2018 &  &  &  & 132.5 &  &  &  \\ \hline
+2019* &  & 1.092 &  & 134.2 &  &  &  \\ \hline
+2020* & 1.065 & 1.086 & 1.157 & 155.3 & 413.4 & 172.1 & 241.3 \\ \hline
+2021* & 1.056 & 1.078 & 1.141 & 177.2 & 430.4 & 170.0 & 260.3 \\ \hline
+2022* & 1.048 & 1.069 & 1.126 & 199.6 & 437.5 & 165.5 & 272.1 \\ \hline
+2023* & 1.043 & 1.060 & 1.112 & 221.9 & 438.3 & 167.9 & 270.4 \\ \hline
+2024* & 1.040 & 1.052 & 1.100 & 244.1 & 434.4 & 172.3 & 262.1 \\ \hline
+2025* & 1.040 & 1.044 & 1.091 & 266.4 & 437.8 & 189.5 & 248.3 \\ \hline
+2026* & 1.040 & 1.036 & 1.083 & 288.6 & 435.4 & 206.8 & 228.6 \\ \hline
+2027* & 1.040 & 1.029 & 1.076 & 310.5 & 428.5 & 224.1 & 204.5 \\ \hline
+2028* & 1.040 & 1.023 & 1.069 & 331.9 & 418.7 & 241.0 & 177.7 \\ \hline
+2029* & 1.040 & 1.018 & 1.063 & 352.7 & 407.7 & 257.6 & 150.1 \\ \hline
+2030* & 1.040 & 1.013 & 1.057 & 372.9 & 397.0 & 273.8 & 123.3 \\ \hline
+2031* & 1.040 & 1.010 & 1.053 & 392.7 & 388.1 & 289.5 & 98.6 \\ \hline
+2032* & 1.040 & 1.007 & 1.050 & 412.2 & 381.7 & 304.9 & 76.8 \\ \hline
+2033* & 1.040 & 1.005 & 1.047 & 431.5 & 378.4 & 320.0 & 58.4 \\ \hline
+\end{tabular}
+\caption{Bazinis scenarijus, $\Delta VDU=5$ proc., $\alpha=0.1$}
+\end{table}
+
+
+\subsection{Alternatyvus scenarijus}
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+Metai & BAF & VAF & AF & \begin{tabular}[c]{@{}c@{}}VTPABD \\ \\ (euro)\end{tabular} & \begin{tabular}[c]{@{}c@{}}AF \\ \\ (mln euro)\end{tabular} & \begin{tabular}[c]{@{}c@{}}BF \\ \\ (mln euro)\end{tabular} & \begin{tabular}[c]{@{}c@{}}VAF \\ \\ (mln euro)\end{tabular} \\ \hline
+2018 &  &  &  & 132.5 &  &  &  \\ \hline
+2019* &  & 1.092 &  & 134.2 &  &  &  \\ \hline
+2020* & 1.065 & 1.086 & 1.157 & 155.3 & 413.4 & 172.1 & 241.3 \\ \hline
+2021* & 1.056 & 1.078 & 1.141 & 177.2 & 430.4 & 170.0 & 260.3 \\ \hline
+2022* & 1.050 & 1.070 & 1.128 & 200.0 & 445.7 & 173.6 & 272.1 \\ \hline
+2023* & 1.047 & 1.062 & 1.117 & 223.4 & 458.6 & 182.9 & 275.7 \\ \hline
+2024* & 1.044 & 1.053 & 1.105 & 246.9 & 461.9 & 191.9 & 270.0 \\ \hline
+2025* & 1.041 & 1.044 & 1.094 & 270.1 & 453.9 & 199.1 & 254.8 \\ \hline
+2026* & 1.039 & 1.035 & 1.082 & 292.3 & 435.7 & 204.3 & 231.4 \\ \hline
+2027* & 1.036 & 1.028 & 1.071 & 313.2 & 409.3 & 207.2 & 202.1 \\ \hline
+2028* & 1.034 & 1.021 & 1.061 & 332.5 & 377.5 & 207.9 & 169.6 \\ \hline
+2029* & 1.032 & 1.015 & 1.053 & 350.0 & 343.2 & 206.4 & 136.8 \\ \hline
+2030* & 1.030 & 1.011 & 1.045 & 365.8 & 309.0 & 203.0 & 106.0 \\ \hline
+2031* & 1.028 & 1.007 & 1.039 & 379.9 & 276.6 & 198.0 & 78.6 \\ \hline
+2032* & 1.026 & 1.005 & 1.033 & 392.5 & 247.3 & 191.7 & 55.6 \\ \hline
+2033* & 1.024 & 1.003 & 1.029 & 403.8 & 221.4 & 184.3 & 37.0 \\ \hline
+\end{tabular}
+\caption{Alternatyvus scenarijus, $\Delta VDU_t=0.95 \times \Delta VDU_{t-1}, \alpha=0.1$}
+\end{table}
+
+\newpage
+\nocite{*}
+\printbibliography[title={Literatūra}]
+
+\end{document}
